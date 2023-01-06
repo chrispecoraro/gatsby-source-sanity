@@ -1,5 +1,5 @@
 import { PluginConfig } from './validateConfig';
-export declare type StateCache = {
+export type StateCache = {
     [key: string]: any;
 };
 export declare enum CACHE_KEYS {

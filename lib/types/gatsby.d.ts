@@ -6,15 +6,15 @@ export interface SanityNode extends Node {
 export interface SanityInputNode extends NodeInput {
     _id: string;
 }
-export declare type GatsbyNodeModel = {
+export type GatsbyNodeModel = {
     getNodeById: (args: {
         id: string;
     }) => SanityNode;
 };
-export declare type GatsbyGraphQLContext = {
+export type GatsbyGraphQLContext = {
     nodeModel: GatsbyNodeModel;
 };
-export declare type GatsbyResolverMap = {
+export type GatsbyResolverMap = {
     [typeName: string]: {
         [fieldName: string]: {
             type?: string;

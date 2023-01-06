@@ -1,4 +1,4 @@
-export declare type SanityDocument<T extends Record<string, any> = Record<string, any>> = {
+export type SanityDocument<T extends Record<string, any> = Record<string, any>> = {
     [P in keyof T]: T[P];
 } & {
     _id: string;
@@ -25,4 +25,4 @@ export interface SanityWebhookDeleteBody {
     projectId?: string;
     dataset?: string;
 }
-export declare type SanityWebhookBody = SanityWebhookDeleteBody | {};
+export type SanityWebhookBody = SanityWebhookDeleteBody | {};

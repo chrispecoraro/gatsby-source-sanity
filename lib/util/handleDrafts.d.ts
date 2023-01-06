@@ -1,1 +1,1 @@
-export declare const removeDrafts: () => any;
+export declare const removeDrafts: () => import("stream").Transform;

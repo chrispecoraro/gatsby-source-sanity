@@ -14,5 +14,5 @@ export interface ProcessingOptions {
     client: SanityClient;
 }
 export declare function toGatsbyNode(doc: SanityDocument, options: ProcessingOptions): SanityInputNode;
-export declare function getTypeName(type: string): any;
+export declare function getTypeName(type: string): string;
 export declare function getConflictFreeFieldName(fieldName: string): string;

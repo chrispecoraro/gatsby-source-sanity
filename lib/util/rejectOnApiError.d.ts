@@ -1,1 +1,1 @@
-export declare const rejectOnApiError: () => any;
+export declare const rejectOnApiError: () => import("stream").Transform;

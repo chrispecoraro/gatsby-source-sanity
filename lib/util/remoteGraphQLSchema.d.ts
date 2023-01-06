@@ -1,14 +1,14 @@
 import { ListTypeNode, NamedTypeNode, NonNullTypeNode } from 'gatsby/graphql';
 import { SanityClient } from '@sanity/client';
 import { PluginConfig } from './validateConfig';
-export declare type FieldDef = {
+export type FieldDef = {
     type: NamedTypeNode | ListTypeNode | NonNullTypeNode;
     namedType: NamedTypeNode;
     isList: boolean;
     aliasFor: string | null;
     isReference: boolean;
 };
-export declare type ObjectTypeDef = {
+export type ObjectTypeDef = {
     name: string;
     kind: 'Object';
     isDocument: boolean;
@@ -16,11 +16,11 @@ export declare type ObjectTypeDef = {
         [key: string]: FieldDef;
     };
 };
-export declare type UnionTypeDef = {
+export type UnionTypeDef = {
     name: string;
     types: string[];
 };
-export declare type TypeMap = {
+export type TypeMap = {
     scalars: string[];
     objects: {
         [key: string]: ObjectTypeDef;

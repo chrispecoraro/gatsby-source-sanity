@@ -1,1 +1,1 @@
-export declare const removeSystemDocuments: () => any;
+export declare const removeSystemDocuments: () => import("stream").Transform;

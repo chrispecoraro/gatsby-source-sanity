@@ -1,5 +1,5 @@
 import { IGatsbyImageData, Layout } from 'gatsby-plugin-image';
-export declare type ImageNode = ImageAsset | ImageObject | ImageRef | string | null | undefined;
+export type ImageNode = ImageAsset | ImageObject | ImageRef | string | null | undefined;
 export declare const EVERY_BREAKPOINT: number[];
 export declare enum ImageFormat {
     NO_CHANGE = "",
@@ -7,7 +7,7 @@ export declare enum ImageFormat {
     JPG = "jpg",
     PNG = "png"
 }
-declare type ImagePalette = {
+type ImagePalette = {
     darkMuted?: ImagePaletteSwatch;
     lightVibrant?: ImagePaletteSwatch;
     darkVibrant?: ImagePaletteSwatch;
@@ -16,49 +16,49 @@ declare type ImagePalette = {
     lightMuted?: ImagePaletteSwatch;
     muted?: ImagePaletteSwatch;
 };
-declare type ImagePaletteSwatch = {
+type ImagePaletteSwatch = {
     background?: string;
     foreground?: string;
     population?: number;
     title?: string;
 };
-declare type ImageDimensions = {
+type ImageDimensions = {
     width: number;
     height: number;
     aspectRatio: number;
 };
-declare type ImageMetadata = {
+type ImageMetadata = {
     palette?: ImagePalette;
     dimensions: ImageDimensions;
     lqip?: string;
 };
-declare type ImageAssetStub = {
+type ImageAssetStub = {
     url: string;
     assetId: string;
     extension: string;
     metadata: ImageMetadata;
 };
-declare type ImageAsset = ImageAssetStub & {
+type ImageAsset = ImageAssetStub & {
     _id: string;
 };
-declare type ImageRef = {
+type ImageRef = {
     _ref: string;
 };
-declare type ImageObject = {
+type ImageObject = {
     asset: ImageRef | ImageAsset;
 };
-export declare type ImageArgs = {
+export type ImageArgs = {
     maxWidth?: number;
     maxHeight?: number;
     sizes?: string;
     toFormat?: ImageFormat;
 };
-declare type SanityLocation = {
+type SanityLocation = {
     projectId: string;
     dataset: string;
 };
-declare type ImageFit = 'clip' | 'crop' | 'fill' | 'fillmax' | 'max' | 'scale' | 'min';
-export declare type GatsbyImageDataArgs = {
+type ImageFit = 'clip' | 'crop' | 'fill' | 'fillmax' | 'max' | 'scale' | 'min';
+export type GatsbyImageDataArgs = {
     width?: number;
     height?: number;
     aspectRatio?: number;
