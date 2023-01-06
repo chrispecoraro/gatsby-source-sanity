@@ -80,21 +80,6 @@ function remapRawFields(obj: {[key: string]: any}) {
     if (key === 'internal') {
       return acc
     }
-    if (acc.metadata?.lqip){
-      acc.metadata.lqip = '';
-    }
-    if (acc.metadata?.palette){
-      acc.metadata.palette = '';
-    }
-    if (acc.metadata?.exif){
-      acc.metadata.exif = '';
-    }
-    if (acc.sha1hash){
-      acc.sha1hash = '';
-    }
-    if (acc._rev){
-      acc._rev = '';
-    }
     if (key.startsWith('_rawData')) {
       let targetKey = key.slice(8)
 
